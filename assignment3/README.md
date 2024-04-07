@@ -38,6 +38,7 @@ kubectl apply -f app-2-dep.yaml
 3. Create Services for the backend apps using the `app-1-svc.yaml` and `app-2-svc.yaml` files.
 <br>
 kubectl apply -f app-1-svc.yaml
+<br>
 kubectl apply -f app-2-svc.yaml
 <br>
 ### Ingress
@@ -49,6 +50,7 @@ kubectl apply -f nginx-ingrees.yaml
 3. Create Ingresses for the backend apps using the `app-1-ingress.yaml` and `app-2-ingress.yaml` files. These Ingresses redirect 70% of the traffic to `app-1` and 30% of the traffic to `app-2`.
 <br>
 kubectl apply -f app-1-ingrees.yaml
+<br>
 kubectl apply -f app-2-ingrees.yaml
 <br>
 
