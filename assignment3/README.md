@@ -5,6 +5,8 @@ Use the following comand to install minikube:
 ```markdown
 ```bash
 choco install minikube
+```
+```
 Use the following command to start minikube:
 minikube start
 
