@@ -2,13 +2,10 @@
 
 This lab focuses on the scheduling, configmaps, canary and blue-green deployment strategies of Kubernetes. We will use Minikube in GitHub CodeSpaces to deploy an nginx service and two backend apps.
 <br>
-Use the following comand to install minikube:
-```bash
-choco install minikube
-```
-```
 Use the following command to start minikube:
+```bash
 minikube start
+```
 
 ## Environment Setup
 
