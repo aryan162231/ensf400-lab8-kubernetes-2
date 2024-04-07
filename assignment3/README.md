@@ -28,6 +28,7 @@ kubectl apply -f nginx-configmap.yaml
 kubectl apply -f nginx-svc.yaml
 <br>
 ### Backend Apps
+
 1. Deploy the backend apps using the `app-1-dep.yaml` and `app-2-dep.yaml` files. These Deployments use the pre-built Docker images `ghcr.io/denoslab/ensf400-sample-app:v1` and `ghcr.io/denoslab/ensf400-sample-app:v2` respectively.
 <br>
 kubectl apply -f app-1-dep.yaml
@@ -49,6 +50,9 @@ kubectl apply -f nginx-ingrees.yaml
 kubectl apply -f app-1-ingrees.yaml
 kubectl apply -f app-2-ingrees.yaml
 <br>
+
+To enable ingrees use the following command:
+minikube addons enable ingress
 
 ## Testing
 
