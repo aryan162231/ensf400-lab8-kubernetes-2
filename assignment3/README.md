@@ -66,5 +66,5 @@ $ curl http://$(minikube ip)/
 $ curl http://$(minikube ip)/
 <br>
 
-## All screenshots for the commands are provided in a separate folder in the assignment submition. Folder is called Assignment3_screenshots
+## All screenshots for the commands are provided in a separate folder in the assignment submission. Folder is called Assignment3_screenshots
 
