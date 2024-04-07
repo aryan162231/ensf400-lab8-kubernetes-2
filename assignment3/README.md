@@ -28,33 +28,33 @@ kubectl apply -f nginx-configmap.yaml
 kubectl apply -f nginx-svc.yaml
 <br>
 ### Backend Apps
-
 1. Deploy the backend apps using the `app-1-dep.yaml` and `app-2-dep.yaml` files. These Deployments use the pre-built Docker images `ghcr.io/denoslab/ensf400-sample-app:v1` and `ghcr.io/denoslab/ensf400-sample-app:v2` respectively.
 <br>
-```bash
 kubectl apply -f app-1-dep.yaml
 kubectl apply -f app-2-dep.yaml
-```
 <br>
-3. Create Services for the backend apps using the `app-1-svc.yaml` and `app-2-svc.yaml` files.
+2. Create Services for the backend apps using the `app-1-svc.yaml` and `app-2-svc.yaml` files.
 <br>
-```bash
 kubectl apply -f app-1-svc.yaml
 kubectl apply -f app-2-svc.yaml
-```
 <br>
 ### Ingress
 
 1. Create an Ingress for the nginx service using the `nginx-ingress.yaml` file. This Ingress redirects requests to path `/` to the backend service `nginx-svc`.
-
-2. Create Ingresses for the backend apps using the `app-1-ingress.yaml` and `app-2-ingress.yaml` files. These Ingresses redirect 70% of the traffic to `app-1` and 30% of the traffic to `app-2`.
+<br>
+kubectl apply -f nginx-ingrees.yaml
+<br>
+3. Create Ingresses for the backend apps using the `app-1-ingress.yaml` and `app-2-ingress.yaml` files. These Ingresses redirect 70% of the traffic to `app-1` and 30% of the traffic to `app-2`.
+<br>
+kubectl apply -f app-1-ingrees.yaml
+kubectl apply -f app-2-ingrees.yaml
+<br>
 
 ## Testing
 
 You can test the setup by sending requests to the Minikube IP and checking the responses. For example:
+<br>
+$ curl http://$(minikube ip)/
+<br>
+$ curl http://$(minikube ip)/
 
-```bash
-$ curl http://$(minikube ip)/
-Hello World from [app-1-dep-86f67f4f87-2d28z]!
-$ curl http://$(minikube ip)/
-Hello World from [app-2-dep-7f686c4d8d-lr95c]!
