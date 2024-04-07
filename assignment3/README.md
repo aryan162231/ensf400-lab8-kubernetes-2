@@ -64,4 +64,7 @@ You can test the setup by sending requests to the Minikube IP and checking the r
 $ curl http://$(minikube ip)/
 <br>
 $ curl http://$(minikube ip)/
+<br>
+
+## All screenshots for the commands are provided in a separate folder in the assignment submition. Folder is called Assignment3_screenshots
 
