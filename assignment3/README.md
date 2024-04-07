@@ -16,19 +16,39 @@ This lab is performed in GitHub CodeSpaces, which provides a complete, configura
 ### Nginx Service
 
 1. Deploy the nginx service using the `nginx-dep.yaml` file. This creates a Deployment named `nginx-dep` with 5 replicas using the nginx 1.14.2 base image and exposes port 80.
-
+<br>
+```bash
+kubectl apply -f nginx-dep.yaml
+```
+<br>
 2. Create a ConfigMap using the `nginx-configmap.yaml` file. This ConfigMap contains the configuration for the nginx service.
-
-3. Mount the configuration file `default.conf` from the ConfigMap to the path `/etc/nginx/conf.d` in the nginx Deployment.
-
-4. Create a Service for the nginx Deployment using the `nginx-svc.yaml` file. This Service is of type ClusterIP and exposes port 80.
+<br>
+```bash
+kubectl apply -f nginx-configmap.yaml
+```
+<br>
+3. Create a Service for the nginx Deployment using the `nginx-svc.yaml` file. This Service is of type ClusterIP and exposes port 80.
+<br>
+```bash
+kubectl apply -f nginx-svc.yaml
+```
 
 ### Backend Apps
 
 1. Deploy the backend apps using the `app-1-dep.yaml` and `app-2-dep.yaml` files. These Deployments use the pre-built Docker images `ghcr.io/denoslab/ensf400-sample-app:v1` and `ghcr.io/denoslab/ensf400-sample-app:v2` respectively.
-
-2. Create Services for the backend apps using the `app-1-svc.yaml` and `app-2-svc.yaml` files.
-
+<br>
+```bash
+kubectl apply -f app-1-dep.yaml
+kubectl apply -f app-2-dep.yaml
+```
+<br>
+3. Create Services for the backend apps using the `app-1-svc.yaml` and `app-2-svc.yaml` files.
+<br>
+```bash
+kubectl apply -f app-1-svc.yaml
+kubectl apply -f app-2-svc.yaml
+```
+<br>
 ### Ingress
 
 1. Create an Ingress for the nginx service using the `nginx-ingress.yaml` file. This Ingress redirects requests to path `/` to the backend service `nginx-svc`.
