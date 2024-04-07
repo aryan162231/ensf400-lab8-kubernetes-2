@@ -32,9 +32,10 @@ kubectl apply -f nginx-svc.yaml
 1. Deploy the backend apps using the `app-1-dep.yaml` and `app-2-dep.yaml` files. These Deployments use the pre-built Docker images `ghcr.io/denoslab/ensf400-sample-app:v1` and `ghcr.io/denoslab/ensf400-sample-app:v2` respectively.
 <br>
 kubectl apply -f app-1-dep.yaml
+<br>
 kubectl apply -f app-2-dep.yaml
 <br>
-2. Create Services for the backend apps using the `app-1-svc.yaml` and `app-2-svc.yaml` files.
+3. Create Services for the backend apps using the `app-1-svc.yaml` and `app-2-svc.yaml` files.
 <br>
 kubectl apply -f app-1-svc.yaml
 kubectl apply -f app-2-svc.yaml
