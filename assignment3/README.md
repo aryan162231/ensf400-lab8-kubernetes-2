@@ -20,6 +20,7 @@ This lab is performed in GitHub CodeSpaces, which provides a complete, configura
 ```bash
 kubectl apply -f nginx-dep.yaml
 ```
+<br>
 2. Create a ConfigMap using the `nginx-configmap.yaml` file. This ConfigMap contains the configuration for the nginx service.
 <br>
 ```bash
